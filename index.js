@@ -2,18 +2,31 @@ const addNewItem = (list, value) => {
   const item = document.createElement('li')
   item.classList.add('item')
   const button = document.createElement('button')
+
   item.innerHTML = ` 
   <input class="input__checkbox" type="checkbox" id="checkbox"> 
   <label class="style" for="checkbox"> ${value}
    <img class="spider" src="icons/dark-icon/fun-icon/spider.png" alt="aranha"> 
  </label> 
- <button class="delete" type="button" data-delete>
-   <img class="garbage"src="icons/dark-icon/fun-icon/garbage.png" alt="botão para deletar"> 
- </button>
+ 
+ 
   ` 
+ button.innerHTML = `
+ <img class="garbage"src="icons/dark-icon/fun-icon/garbage.png" alt="botão para deletar"> 
+
+  `
   
-  
+  button.setAttribute('type', 'button')
+  button.classList.add('delete')
+  button.addEventListener('click', removeItem)
+
+  item.appendChild(button)
   list.appendChild(item)
+}
+
+const removeItem = (event) => { 
+  const li = event.target.closest('.item')
+  li.remove()
 }
 
 const inicializarAplicacao = () => {
