@@ -6,7 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To do List</title>
 </head>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Handlee&display=swap" rel="stylesheet">
+
 <body>
-  
+  <section data-welcome>
+    <div class="container">
+      <div class="welcome">
+        <img class="witch" src="icons/dark-icon/fun-icon/witch.png" alt="uma bruxinha em cima da vassoura">
+        <h1>Hello, Witch! <br> Tell me your name and then you can make your magic stuff.</h1>
+          <form class="form" data-submit>
+          <input type="text" class="input--welcome" placeholder="type your magic name">
+      </form>
+      </div>
+    </div>
+  </section>
+    <section data-toDoList class="To__do__list hidden">
+      <div class="container__things__toDo">
+        <div class="control">
+          <h1 class="text">Witch things to do</h1>
+          <form data-form class="form">
+            <img class="hat" src="icons/dark-icon/fun-icon/witch-hat.png " alt="chapéu de bruxa roxo">
+            <input data-input type="text" class="input" placeholder="type your magic stuff">
+          </form>
+        </div>
+        <ul data-list>
+          <li class="item">
+             <input class="input__checkbox" type="checkbox" id="checkbox"> 
+             <label class="style" for="checkbox"> beltane ritual 
+              <img class="spider" src="icons/dark-icon/fun-icon/spider.png" alt="aranha"> 
+            </label> 
+            <button class="delete" type="button" data-delete>
+              <img class="garbage"src="icons/dark-icon/fun-icon/garbage.png" alt="botão para deletar"> 
+            </button>
+            
+          </li>
+        </ul>
+          <div class="container__things__done">
+            <img class="cat" src="icons/dark-icon/fun-icon/black-cat.png" alt="gato preto">
+            <h1 class="text__done">Witch things done</h1>
+          </div> 
+      </div>
+    </section>
+
+    <script src="index.js"></script>
 </body>
 </html>
+
